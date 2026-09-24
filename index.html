@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HSD Gazi · Huawei Student Developers Gazi Üniversitesi</title>
+  <meta name="description" content="Huawei Student Developers Gazi Üniversitesi topluluğu. Cloud, yapay zekâ ve yazılım alanında etkinlikler, eğitimler ve projeler. Öğren, üret, bağlan.">
+  <meta name="author" content="İsmail Bilgehan Kazancı">
+  <meta property="og:title" content="HSD Gazi · Huawei Student Developers">
+  <meta property="og:description" content="Gazi Üniversitesi'nin geliştirici topluluğu. Öğren, üret, bağlan.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+  <!-- Deneme yayını adresi. Site başka bir adrese taşınınca bu iki satırı yeni adresle güncelleyin. -->
+  <meta property="og:url" content="https://dailydana.github.io/hsd-gazi-web/">
+  <meta property="og:image" content="https://dailydana.github.io/hsd-gazi-web/assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#F3F0EA">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<a class="skip" href="#hakkimizda">İçeriğe geç</a>
+
+<!-- ===== Üst menü ===== -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="nav-logo" aria-label="HSD Gazi ana sayfa">
+      <img src="assets/img/hsd-logo.png" alt="HSD · Huawei Student Developers" width="633" height="191">
+      <span class="nav-uni">GAZİ</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menüyü aç" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span>
+    </button>
+    <nav class="nav-links" id="navLinks" aria-label="Ana menü">
+      <a href="#hakkimizda" data-nav>Hakkımızda</a>
+      <a href="#komiteler" data-nav>Komiteler</a>
+      <a href="#etkinlikler" data-nav>Etkinlikler</a>
+      <a href="#ekip" data-nav>Ekip</a>
+      <a href="#sss" data-nav>SSS</a>
+      <a href="https://hsdturkiyebootcamp.com/" target="_blank" rel="noopener" class="nav-ext">HSD Türkiye <span aria-hidden="true">↗</span></a>
+      <a href="#basvur" class="btn btn-red btn-sm">Ekibe katıl</a>
+    </nav>
+  </div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+</header>
+
+<main id="top">
+
+  <!-- ===== Hero ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-cols" aria-hidden="true"></div>
+    <div class="hero-lit" aria-hidden="true"></div>
+    <div class="hero-glow" aria-hidden="true"></div>
+
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <div class="kicker kicker-mono" data-scramble>GAZİ ÜNİVERSİTESİ · HUAWEI STUDENT DEVELOPERS</div>
+        <h1 class="hero-title" aria-label="Öğren. Üret. Bağlan.">
+          <span class="ln" aria-hidden="true"><span>ÖĞREN<span class="r">.</span></span></span>
+          <span class="ln" aria-hidden="true"><span>ÜRET<span class="r">.</span></span></span>
+          <span class="ln" aria-hidden="true"><span>BAĞLAN<span class="r">.</span></span></span>
+        </h1>
+        <p class="lead">Cloud, yapay zekâ ve yazılım alanında etkinlikler, eğitimler ve projelerle Gazi Üniversitesi öğrencilerini bir araya getiren geliştirici topluluğuyuz.</p>
+        <div class="hero-cta">
+          <a href="#basvur" class="btn btn-red">Ekibe katıl <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="#etkinlikler" class="btn btn-line">Etkinlikleri gör</a>
+        </div>
+      </div>
+
+      <!-- Etkileşimli terminal: JS yoksa sabit kod gösterilir -->
+      <div class="term" id="term">
+        <div class="code-bar">
+          <i></i><i></i><i></i>
+          <span>hsd@gazi: ~</span>
+          <kbd class="kbd" title="Terminale odaklanmak için / tuşuna bas">/</kbd>
+        </div>
+        <div class="term-body" id="termBody">
+          <div class="term-out" id="termOut" aria-live="polite">
+<div class="t-line"><span class="term-ps">hsd@gazi:~$</span>cat topluluk.js</div>
+<div class="t-line"><span class="c">// Gazi'nin geliştirici topluluğu</span></div>
+<div class="t-line"><span class="k">export const</span> topluluk = {</div>
+<div class="t-line">  ad: <span class="s">"HSD Gazi"</span>,</div>
+<div class="t-line">  universite: <span class="s">"Gazi Üniversitesi"</span>,</div>
+<div class="t-line">  odak: [<span class="s">"Cloud"</span>, <span class="s">"Yapay Zekâ"</span>, <span class="s">"DevOps"</span>],</div>
+<div class="t-line">  komiteler: <span class="n">5</span>,</div>
+<div class="t-line">  yeniUye: <span class="k">null</span>, <span class="c">// seni bekliyoruz</span></div>
+<div class="t-line">};</div>
+          </div>
+          <form class="term-line" id="termForm" autocomplete="off" hidden>
+            <label class="term-ps" for="termIn">hsd@gazi:~$</label>
+            <input id="termIn" class="term-in" type="text" spellcheck="false" autocapitalize="off" autocomplete="off" enterkeyhint="send" aria-label="Terminal komutu. Başlamak için help yaz.">
+          </form>
+        </div>
+        <div class="term-chips" id="termChips" hidden>
+          <span class="term-chips-label">dene:</span>
+          <button type="button" data-cmd="help">help</button>
+          <button type="button" data-cmd="komiteler">komiteler</button>
+          <button type="button" data-cmd="etkinlikler">etkinlikler</button>
+          <button type="button" data-cmd="basvur">basvur</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Kesişen bantlar ===== -->
+  <div class="bands" aria-hidden="true">
+    <div class="band band-dark">
+      <div class="band-track band-rev">
+        <span>ÖĞREN</span><i>✦</i><span>ÜRET</span><i>✦</i><span>BAĞLAN</span><i>✦</i><span>ÖĞREN</span><i>✦</i><span>ÜRET</span><i>✦</i><span>BAĞLAN</span><i>✦</i><span>ÖĞREN</span><i>✦</i><span>ÜRET</span><i>✦</i><span>BAĞLAN</span><i>✦</i>
+        <span>ÖĞREN</span><i>✦</i><span>ÜRET</span><i>✦</i><span>BAĞLAN</span><i>✦</i><span>ÖĞREN</span><i>✦</i><span>ÜRET</span><i>✦</i><span>BAĞLAN</span><i>✦</i><span>ÖĞREN</span><i>✦</i><span>ÜRET</span><i>✦</i><span>BAĞLAN</span><i>✦</i>
+      </div>
+    </div>
+    <div class="band band-red">
+      <div class="band-track">
+        <span>WORKSHOP</span><i>&lt;/&gt;</i><span>BOOTCAMP</span><i>&lt;/&gt;</i><span>HACKATHON</span><i>&lt;/&gt;</i><span>TEKNİK SÖYLEŞİ</span><i>&lt;/&gt;</i><span>CLOUD</span><i>&lt;/&gt;</i><span>YAPAY ZEKÂ</span><i>&lt;/&gt;</i><span>NETWORKING</span><i>&lt;/&gt;</i>
+        <span>WORKSHOP</span><i>&lt;/&gt;</i><span>BOOTCAMP</span><i>&lt;/&gt;</i><span>HACKATHON</span><i>&lt;/&gt;</i><span>TEKNİK SÖYLEŞİ</span><i>&lt;/&gt;</i><span>CLOUD</span><i>&lt;/&gt;</i><span>YAPAY ZEKÂ</span><i>&lt;/&gt;</i><span>NETWORKING</span><i>&lt;/&gt;</i>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Hakkımızda ===== -->
+  <section class="sec" id="hakkimizda">
+    <div class="wrap">
+      <div class="sec-head"><span class="sec-no">01</span><span class="sec-label" data-scramble>HAKKIMIZDA</span></div>
+      <div class="about-grid">
+        <h2 class="h2 reveal">Kampüste teknolojiyi <em>birlikte</em> öğreniyor, birlikte üretiyoruz.</h2>
+        <div class="about-text reveal">
+          <p><strong>Huawei Student Developers (HSD)</strong>, teknoloji tutkusunu paylaşan üniversite öğrencilerine yönelik, Huawei tarafından desteklenen küresel bir programdır. <strong>HSD Gazi</strong> ise bu programın Gazi Üniversitesi'ndeki öğrenci topluluğudur.</p>
+          <p>Workshop'lar, teknik söyleşiler, bootcamp'ler ve proje çalışmalarıyla öğrencilerin sınıfta öğrendiklerini gerçek projelere dönüştürmesine, sektörle tanışmasına ve birlikte bir şeyler inşa etmesine alan açıyoruz. Yazılımcı olmak şart değil: etkinlik düzenlemekten tasarıma, içerik üretmekten organizasyona kadar herkesin katkı verebileceği bir yer burası.</p>
+        </div>
+      </div>
+
+      <div class="pillars">
+        <article class="pillar reveal">
+          <span class="pillar-no">01</span>
+          <h3>Öğren</h3>
+          <p>Workshop'lar, eğitimler ve bootcamp'lerle Cloud, yapay zekâ ve yazılım alanında yeni beceriler kazan.</p>
+        </article>
+        <article class="pillar reveal">
+          <span class="pillar-no">02</span>
+          <h3>Üret</h3>
+          <p>Ekip hâlinde projeler geliştir, hackathon'lara katıl, aklındaki fikri çalışan bir şeye dönüştür.</p>
+        </article>
+        <article class="pillar reveal">
+          <span class="pillar-no">03</span>
+          <h3>Bağlan</h3>
+          <p>Sektörden konuşmacılarla, Türkiye'nin dört bir yanındaki HSD topluluklarıyla ve kampüsteki meraklı insanlarla tanış.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HSD Türkiye ===== -->
+  <section class="tr-band" id="hsd-turkiye">
+    <div class="wrap tr-grid">
+      <div class="reveal">
+        <div class="kicker kicker-light">HSD TÜRKİYE</div>
+        <h2 class="h2 h2-light">Türkiye çapında bir ağın <em>parçasıyız</em>.</h2>
+        <p>Cloud, yapay zekâ ve DevOps bootcamp'leri, yarışmalar ve Türkiye genelindeki HSD etkinlikleri HSD Türkiye'nin ana sitesinde duyuruluyor. Programlar ücretsiz. Koşulları tamamlayan katılımcılar sertifika alabiliyor.</p>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-num"><span data-count="2000">2.000</span><b>+</b></div>
+            <div class="stat-label">katılımcı<br>AI Bootcamp</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num"><span data-count="1500">1.500</span><b>+</b></div>
+            <div class="stat-label">katılımcı<br>DevOps Bootcamp</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num"><span>0</span><b>₺</b></div>
+            <div class="stat-label">katılım<br>ücreti</div>
+          </div>
+        </div>
+        <p class="stats-src">Kaynak: hsdturkiyebootcamp.com · 2025 programları</p>
+      </div>
+
+      <div class="tr-links reveal">
+        <a class="tr-link" href="https://hsdturkiyebootcamp.com/" target="_blank" rel="noopener">
+          <span class="tr-link-label">Ana site · Bootcamp'ler</span>
+          <strong>hsdturkiyebootcamp.com</strong>
+          <span class="tr-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="tr-link" href="https://www.instagram.com/hsdturkiye/" target="_blank" rel="noopener">
+          <span class="tr-link-label">Instagram</span>
+          <strong>@hsdturkiye</strong>
+          <span class="tr-arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Komiteler ===== -->
+  <section class="sec" id="komiteler">
+    <div class="wrap">
+      <div class="sec-head"><span class="sec-no">02</span><span class="sec-label" data-scramble>KOMİTELER</span></div>
+      <div class="sec-intro">
+        <h2 class="h2 reveal">Beş ekip, <em>tek</em> topluluk.</h2>
+        <p class="reveal">Her komitenin kendi alanı var ama etkinliklerin hepsi ortak emekle çıkıyor. İlgi alanına en yakın olanı seç.</p>
+      </div>
+
+      <div class="list">
+        <article class="row reveal">
+          <span class="row-no">01</span>
+          <div class="row-body">
+            <h3>Genel Sekreterlik</h3>
+            <p>Toplantıları, yazışmaları ve belgeleri yönetir; komiteler arasındaki koordinasyonu sağlar. Topluluğun düzenli işlemesinin arkasındaki ekip.</p>
+          </div>
+          <span class="tag">#yönetim</span>
+        </article>
+        <article class="row reveal">
+          <span class="row-no">02</span>
+          <div class="row-body">
+            <h3>Organizasyon Komitesi</h3>
+            <p>Etkinlikleri fikir aşamasından gerçekleştiği güne kadar planlar: mekân, konuşmacı, katılımcı ve gün içindeki akış.</p>
+          </div>
+          <span class="tag">#etkinlik</span>
+        </article>
+        <article class="row reveal">
+          <span class="row-no">03</span>
+          <div class="row-body">
+            <h3>Sosyal Medya Komitesi</h3>
+            <p>İçerik takvimini hazırlar, paylaşımları ve hikâyeleri yönetir, toplulukla etkileşimi canlı tutar.</p>
+          </div>
+          <span class="tag">#içerik</span>
+        </article>
+        <article class="row reveal">
+          <span class="row-no">04</span>
+          <div class="row-body">
+            <h3>Teknik Etkinlik Komitesi</h3>
+            <p>Workshop, eğitim ve teknik oturumların içeriğini hazırlar; hackathon ve proje çalışmalarını yürütür.</p>
+          </div>
+          <span class="tag">#teknik</span>
+        </article>
+        <article class="row reveal">
+          <span class="row-no">05</span>
+          <div class="row-body">
+            <h3>Tanıtım ve Tasarım Komitesi</h3>
+            <p>Afişlerden sunumlara topluluğun görsel kimliğini oluşturur, etkinliklerin tanıtım materyallerini hazırlar.</p>
+          </div>
+          <span class="tag">#tasarım</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Etkinlikler ===== -->
+  <section class="sec sec-paper" id="etkinlikler">
+    <div class="wrap">
+      <div class="sec-head"><span class="sec-no">03</span><span class="sec-label" data-scramble>ETKİNLİKLER</span></div>
+      <div class="sec-intro sec-intro-row">
+        <h2 class="h2 reveal">Sıradaki etkinlikte <em>görüşelim</em>.</h2>
+        <div class="tabs" role="tablist" aria-label="Etkinlik filtresi">
+          <button class="tab is-active" role="tab" aria-selected="true" aria-controls="events" data-tab="yaklasan">Yaklaşan <span class="tab-n" data-n="yaklasan"></span></button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="events" data-tab="gecmis">Geçmiş <span class="tab-n" data-n="gecmis"></span></button>
+        </div>
+      </div>
+      <div class="events" id="events" role="tabpanel">
+        <noscript><p class="events-empty">Etkinlikleri görmek için JavaScript'i etkinleştir ya da Instagram'da <a href="https://www.instagram.com/hsdgazi/">@hsdgazi</a>'yi takip et.</p></noscript>
+      </div>
+      <p class="events-note">Tüm duyurular önce Instagram'da: <a href="https://www.instagram.com/hsdgazi/" target="_blank" rel="noopener">@hsdgazi ↗</a></p>
+    </div>
+  </section>
+
+  <!-- ===== Ekip ===== -->
+  <section class="sec" id="ekip">
+    <div class="wrap">
+      <div class="sec-head"><span class="sec-no">04</span><span class="sec-label" data-scramble>EKİP</span></div>
+      <div class="sec-intro">
+        <h2 class="h2 reveal">Topluluğu yürüten <em>ekip</em>.</h2>
+        <p class="reveal">Yönetim kurulumuz ve komite sorumlularımız. Son kart ise senin için ayrıldı.</p>
+      </div>
+      <div class="team" id="team"></div>
+    </div>
+  </section>
+
+  <!-- ===== Başvuru ===== -->
+  <section class="apply" id="basvur">
+    <div class="apply-ghost" aria-hidden="true">&lt;/&gt;</div>
+    <div class="wrap apply-grid">
+      <div class="reveal">
+        <div class="kicker kicker-white">ŞİMDİ BAŞVUR</div>
+        <h2 class="apply-title">EKİP ARKADAŞI<br>ARIYORUZ.</h2>
+      </div>
+      <div class="apply-side reveal">
+        <p>Fikir üreten, sorumluluk alan ve birlikte büyümek isteyen yeni takım arkadaşları arıyoruz. Açık pozisyonlar:</p>
+        <ul class="chips">
+          <li>Genel Sekreterlik</li>
+          <li>Organizasyon Komitesi</li>
+          <li>Sosyal Medya Komitesi</li>
+          <li>Teknik Etkinlik Komitesi</li>
+          <li>Tanıtım ve Tasarım Komitesi</li>
+        </ul>
+        <a class="btn btn-white" data-basvuru href="https://www.instagram.com/hsdgazi/" target="_blank" rel="noopener">
+          <span data-basvuru-label>Başvuru linki Instagram profilimizde</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SSS ===== -->
+  <section class="sec" id="sss">
+    <div class="wrap faq-grid">
+      <div class="faq-side">
+        <div class="sec-head"><span class="sec-no">05</span><span class="sec-label" data-scramble>SSS</span></div>
+        <h2 class="h2 reveal">Sıkça sorulan <em>sorular</em>.</h2>
+        <p class="reveal">Aradığın cevap burada yoksa Instagram'dan mesaj atman yeterli, en kısa sürede dönüyoruz.</p>
+        <a class="btn btn-line reveal" href="https://www.instagram.com/hsdgazi/" target="_blank" rel="noopener">Bize yaz ↗</a>
+      </div>
+
+      <div class="faq">
+        <details class="reveal" open>
+          <summary>HSD nedir?</summary>
+          <div class="faq-a"><p>Huawei Student Developers (HSD), teknoloji tutkusunu paylaşan üniversite öğrencilerine yönelik, Huawei tarafından desteklenen küresel bir programdır. HSD Gazi, bu programın Gazi Üniversitesi'ndeki öğrenci topluluğudur. Kampüste etkinlikler, eğitimler ve proje çalışmaları düzenliyoruz.</p></div>
+        </details>
+        <details class="reveal">
+          <summary>Kimler katılabilir?</summary>
+          <div class="faq-a"><p>Gazi Üniversitesi'nde okuyan tüm öğrenciler. Bölüm ya da sınıf şartı yok. Mühendislikten iletişime, tasarımdan işletmeye kadar her alandan öğrencinin yapabileceği bir iş var.</p></div>
+        </details>
+        <details class="reveal">
+          <summary>Kod yazmayı bilmiyorum, yine de katılabilir miyim?</summary>
+          <div class="faq-a"><p>Kesinlikle. Genel Sekreterlik, Organizasyon, Sosyal Medya ve Tanıtım-Tasarım komitelerinde kodlama bilgisi gerekmiyor. Teknik etkinliklerimizin çoğu da temelden başlıyor, yani öğrenmek için doğru yerdesin.</p></div>
+        </details>
+        <details class="reveal">
+          <summary>Üyelik ücretli mi?</summary>
+          <div class="faq-a"><p>Hayır. Topluluğa katılmak ve etkinliklerimize gelmek ücretsizdir.</p></div>
+        </details>
+        <details class="reveal">
+          <summary>Etkinliklere katılmak için ekipte olmam gerekiyor mu?</summary>
+          <div class="faq-a"><p>Hayır. Etkinliklerimiz tüm öğrencilere açık. Ön kayıt gereken etkinliklerde kayıt linkini duyuruda paylaşıyoruz.</p></div>
+        </details>
+        <details class="reveal">
+          <summary>Komitelere nasıl başvurabilirim?</summary>
+          <div class="faq-a"><p>Başvuru dönemlerinde formu doldurman yeterli. Form linkini bu sitenin <a href="#basvur">Başvuru</a> bölümünde ve Instagram profilimizde paylaşıyoruz. Başvurular değerlendirildikten sonra seninle iletişime geçiyoruz.</p></div>
+        </details>
+        <details class="reveal">
+          <summary>HSD Türkiye bootcamp'leri nedir?</summary>
+          <div class="faq-a"><p>HSD Türkiye'nin Cloud, yapay zekâ ve DevOps gibi alanlarda düzenlediği ücretsiz, çevrim içi eğitim programlarıdır. Koşulları tamamlayan katılımcılar sertifika alabiliyor. Güncel programlar için: <a href="https://hsdturkiyebootcamp.com/" target="_blank" rel="noopener">hsdturkiyebootcamp.com ↗</a></p></div>
+        </details>
+        <details class="reveal">
+          <summary>Size nasıl ulaşabilirim?</summary>
+          <div class="faq-a"><p>En hızlı yol Instagram: <a href="https://www.instagram.com/hsdgazi/" target="_blank" rel="noopener">@hsdgazi</a>. Kurumsal iş birlikleri ve sponsorluk için <a href="https://tr.linkedin.com/company/hsdc-gazi-university" target="_blank" rel="noopener">LinkedIn</a> üzerinden de yazabilirsin.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== Alt bilgi ===== -->
+<footer class="footer">
+  <div class="footer-mega" aria-hidden="true">&lt;HSD/&gt;</div>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/img/hsd-logo-beyaz.png" alt="HSD · Huawei Student Developers" width="633" height="191">
+        <p>Huawei Student Developers<br>Gazi Üniversitesi</p>
+      </div>
+      <div class="footer-cols">
+        <div>
+          <h4>Site</h4>
+          <a href="#hakkimizda">Hakkımızda</a>
+          <a href="#komiteler">Komiteler</a>
+          <a href="#etkinlikler">Etkinlikler</a>
+          <a href="#ekip">Ekip</a>
+          <a href="#sss">SSS</a>
+        </div>
+        <div>
+          <h4>HSD Gazi</h4>
+          <a href="https://www.instagram.com/hsdgazi/" target="_blank" rel="noopener">Instagram ↗</a>
+          <a href="https://tr.linkedin.com/company/hsdc-gazi-university" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="#basvur">Başvuru</a>
+        </div>
+        <div>
+          <h4>HSD Türkiye</h4>
+          <a href="https://hsdturkiyebootcamp.com/" target="_blank" rel="noopener">Ana site ↗</a>
+          <a href="https://www.instagram.com/hsdturkiye/" target="_blank" rel="noopener">Instagram ↗</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> HSD Gazi · Gazi Üniversitesi</span>
+      <span class="footer-credit"><span class="footer-credit-tag">&lt;/&gt;</span> Tasarım ve geliştirme: <a href="https://github.com/DailyDana" target="_blank" rel="noopener author">İsmail Bilgehan Kazancı</a></span>
+      <span class="footer-social">
+        <a href="https://www.instagram.com/hsdgazi/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" class="fill"/></svg>
+        </a>
+        <a href="https://tr.linkedin.com/company/hsdc-gazi-university" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V16M8 7.6v.1M11.5 16v-5.5M11.5 13c0-1.6 1-2.6 2.3-2.6s2.2.9 2.2 2.6V16"/></svg>
+        </a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/veri.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sayfa bulunamadı · HSD Gazi</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <!-- 404 sayfası her klasör derinliğinde açılabildiği için stiller burada, dosyaya bağımlı değil -->
+  <style>
+    :root { --bg: #F3F0EA; --ink: #111114; --mute: #5E5E66; --red: #C7000B; --red-hi: #FF3048; --dark: #0F0F12; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh; display: grid; place-items: center; padding: 32px 16px;
+      background: var(--bg); color: var(--ink); font-family: 'Archivo', system-ui, sans-serif;
+      background-image: linear-gradient(90deg, rgba(17,17,20,.05) 1px, transparent 1px);
+      background-size: 120px 100%;
+    }
+    .box { width: min(640px, 100%); }
+    .brand { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 22px; letter-spacing: 1px; }
+    .brand b { color: var(--red); }
+    h1 { margin-top: 28px; font-size: clamp(110px, 26vw, 200px); line-height: 1; font-weight: 900; font-stretch: 75%; letter-spacing: -4px; }
+    h1 span { color: var(--red); }
+    .term { margin-top: 24px; background: var(--dark); color: #E8E8EE; box-shadow: 12px 12px 0 var(--red); font-family: 'JetBrains Mono', monospace; font-size: 14px; line-height: 1.75; }
+    .bar { display: flex; gap: 8px; padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,.08); }
+    .bar i { width: 10px; height: 10px; border-radius: 50%; background: #3A3A44; }
+    .bar i:first-child { background: var(--red-hi); }
+    .body { padding: 16px 18px 18px; white-space: pre-wrap; overflow-wrap: anywhere; }
+    .ps { color: var(--red-hi); font-weight: 700; }
+    .err { color: #FF6B85; }
+    .dim { color: #75757F; }
+    p { margin-top: 30px; font-size: 18px; color: var(--mute); }
+    a.btn { display: inline-flex; align-items: center; gap: 10px; margin-top: 22px; padding: 16px 24px; background: var(--red); color: #fff; font-weight: 700; text-decoration: none; transition: background .2s ease; }
+    a.btn:hover { background: #A3000A; }
+    a:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+  </style>
+</head>
+<body>
+  <main class="box">
+    <div class="brand"><b>&lt;</b> HSD <b>&gt;</b> GAZİ</div>
+    <h1>404<span>.</span></h1>
+    <div class="term" role="img" aria-label="Terminal: böyle bir sayfa yok">
+      <div class="bar"><i></i><i></i><i></i></div>
+      <div class="body"><span class="ps">hsd@gazi:~$</span> cd <span id="path">/aradigin-sayfa</span>
+<span class="err">bash: cd: böyle bir dizin yok</span>
+<span class="dim">// taşınmış ya da hiç var olmamış olabilir</span></div>
+    </div>
+    <p>Aradığın sayfayı bulamadık. Ana sayfadan devam edebilirsin.</p>
+    <a class="btn" id="home" href="/">Ana sayfaya dön →</a>
+  </main>
+  <script>
+    (function () {
+      var p = document.getElementById('path');
+      if (p) p.textContent = decodeURIComponent(location.pathname) || '/';
+      // GitHub Pages proje sitelerinde (kullanici.github.io/depo/) ana sayfa ilk klasördür
+      var segs = location.pathname.split('/').filter(Boolean);
+      if (/\.github\.io$/.test(location.hostname) && segs.length) {
+        document.getElementById('home').href = '/' + segs[0] + '/';
+      }
+    })();
+  </script>
+</body>
+</html>
