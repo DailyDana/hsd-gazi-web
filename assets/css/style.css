@@ -257,6 +257,13 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .band { position: absolute; left: -6%; right: -6%; top: 50%; overflow: hidden; border-block: 2px solid var(--ink); }
 .band-red { background: var(--red); color: #fff; transform: translateY(-50%) rotate(-2.6deg); z-index: 2; box-shadow: 0 18px 40px -18px rgba(17,17,20,.5); }
 .band-dark { background: var(--ink); color: var(--bg); transform: translateY(-50%) rotate(2deg); }
+/* Sabit açı dar ekranda bantları yeterince ayırmıyor, siyah bant kırmızının altında kayboluyordu.
+   atan2(Δ, 50vw): ekran kenarında bant merkezi Δ kadar kayar; uçlar her genişlikte bant yüksekliğinden
+   fazla ayrışır. max/min, geniş ekranlarda eski açıların altına inilmesin diye. */
+@supports (transform: rotate(atan2(1px, 1px))) {
+  .band-dark { transform: translateY(-50%) rotate(max(2deg, atan2(36px, 50vw))); }
+  .band-red { transform: translateY(-50%) rotate(min(-2.6deg, atan2(-42px, 50vw))); }
+}
 /* Kayma yalnızca main.js içeriği ekranı dolduracak kadar çoğalttıktan sonra (is-ready) başlar;
    aksi hâlde döngü başında/sonunda bantta boşluk kalıyordu. */
 .band-track { display: flex; width: max-content; }
@@ -566,6 +573,9 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   .bands { height: 150px; margin-top: -30px; }
   .band span { font-size: 19px; padding: 13px 14px; }
   .band i { font-size: 15px; padding: 13px 2px; }
+  /* Telefonda X yerine "<": bantlar solda birleşip sağa doğru açılır, siyah bant okunur kalır */
+  .band-dark { transform: translateY(calc(-50% + 20px)) rotate(6deg); }
+  .band-red { transform: translateY(calc(-50% - 20px)) rotate(-5deg); }
   .events { grid-template-columns: 1fr; }
   .team { grid-template-columns: repeat(2, 1fr); gap: 24px 14px; }
   .member h3 { font-size: 17px; }
