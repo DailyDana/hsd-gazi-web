@@ -257,8 +257,11 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .band { position: absolute; left: -6%; right: -6%; top: 50%; overflow: hidden; border-block: 2px solid var(--ink); }
 .band-red { background: var(--red); color: #fff; transform: translateY(-50%) rotate(-2.6deg); z-index: 2; box-shadow: 0 18px 40px -18px rgba(17,17,20,.5); }
 .band-dark { background: var(--ink); color: var(--bg); transform: translateY(-50%) rotate(2deg); }
-.band-track { display: flex; width: max-content; animation: marquee 42s linear infinite; }
-.band-rev { animation-direction: reverse; animation-duration: 50s; }
+/* Kayma yalnızca main.js içeriği ekranı dolduracak kadar çoğalttıktan sonra (is-ready) başlar;
+   aksi hâlde döngü başında/sonunda bantta boşluk kalıyordu. */
+.band-track { display: flex; width: max-content; }
+.band-track.is-ready { animation: marquee var(--band-dur, 40s) linear infinite; }
+.band-rev.is-ready { animation-direction: reverse; }
 .band span, .band i {
   padding: 16px 20px; font-weight: 800; font-stretch: 80%; font-size: 24px; letter-spacing: 1.5px; white-space: nowrap; line-height: 1.2;
 }

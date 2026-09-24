@@ -107,16 +107,21 @@
     </div>
   </section>
 
-  <!-- ===== Kesişen bantlar ===== -->
+  <!-- ===== Kesişen bantlar =====
+       data-items: bir tekrarın kaç öğeden oluştuğu. main.js bu ilk tekrarı alıp
+       ekran genişliğini dolduracak kadar çoğaltır; buradaki fazladan tekrarlar yalnızca JS kapalıyken bandı doldurmak için. -->
   <div class="bands" aria-hidden="true">
     <div class="band band-dark">
-      <div class="band-track band-rev">
-        <span>ÖĞREN</span><i>✦</i><span>ÜRET</span><i>✦</i><span>BAĞLAN</span><i>✦</i><span>ÖĞREN</span><i>✦</i><span>ÜRET</span><i>✦</i><span>BAĞLAN</span><i>✦</i><span>ÖĞREN</span><i>✦</i><span>ÜRET</span><i>✦</i><span>BAĞLAN</span><i>✦</i>
-        <span>ÖĞREN</span><i>✦</i><span>ÜRET</span><i>✦</i><span>BAĞLAN</span><i>✦</i><span>ÖĞREN</span><i>✦</i><span>ÜRET</span><i>✦</i><span>BAĞLAN</span><i>✦</i><span>ÖĞREN</span><i>✦</i><span>ÜRET</span><i>✦</i><span>BAĞLAN</span><i>✦</i>
+      <div class="band-track band-rev" data-items="6" data-speed="30">
+        <span>ÖĞREN</span><i>✦</i><span>ÜRET</span><i>✦</i><span>BAĞLAN</span><i>✦</i>
+        <span>ÖĞREN</span><i>✦</i><span>ÜRET</span><i>✦</i><span>BAĞLAN</span><i>✦</i>
+        <span>ÖĞREN</span><i>✦</i><span>ÜRET</span><i>✦</i><span>BAĞLAN</span><i>✦</i>
+        <span>ÖĞREN</span><i>✦</i><span>ÜRET</span><i>✦</i><span>BAĞLAN</span><i>✦</i>
+        <span>ÖĞREN</span><i>✦</i><span>ÜRET</span><i>✦</i><span>BAĞLAN</span><i>✦</i>
       </div>
     </div>
     <div class="band band-red">
-      <div class="band-track">
+      <div class="band-track" data-items="14" data-speed="42">
         <span>WORKSHOP</span><i>&lt;/&gt;</i><span>BOOTCAMP</span><i>&lt;/&gt;</i><span>HACKATHON</span><i>&lt;/&gt;</i><span>TEKNİK SÖYLEŞİ</span><i>&lt;/&gt;</i><span>CLOUD</span><i>&lt;/&gt;</i><span>YAPAY ZEKÂ</span><i>&lt;/&gt;</i><span>NETWORKING</span><i>&lt;/&gt;</i>
         <span>WORKSHOP</span><i>&lt;/&gt;</i><span>BOOTCAMP</span><i>&lt;/&gt;</i><span>HACKATHON</span><i>&lt;/&gt;</i><span>TEKNİK SÖYLEŞİ</span><i>&lt;/&gt;</i><span>CLOUD</span><i>&lt;/&gt;</i><span>YAPAY ZEKÂ</span><i>&lt;/&gt;</i><span>NETWORKING</span><i>&lt;/&gt;</i>
       </div>

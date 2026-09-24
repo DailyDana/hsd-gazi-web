@@ -299,6 +299,49 @@
     items.filter(el => el !== heroKicker).forEach(el => io.observe(el));
   });
 
+  /* ---------- kesişen bantlar: ekranı dolduracak kadar içerik ---------- */
+  // Kayma translateX(-50%) ile döner; boşluksuz olması için izin her yarısı bant genişliğinden
+  // geniş olmalı. Bir tekrarın genişliği ölçülür, yeterince çoğaltılır ve iki kopya yan yana konur.
+  safe('bands', () => {
+    const tracks = $$('.band-track[data-items]');
+    if (!tracks.length) return;
+    const sets = new Map(tracks.map(tr => {
+      const n = Number(tr.dataset.items) || tr.children.length;
+      return [tr, Array.from(tr.children).slice(0, n).map(el => el.outerHTML).join('')];
+    }));
+    const build = () => {
+      tracks.forEach(tr => {
+        const band = tr.parentElement;
+        const set = sets.get(tr);
+        tr.classList.remove('is-ready');
+        tr.innerHTML = set;
+        const setW = tr.offsetWidth;
+        const bandW = band.offsetWidth;
+        if (!setW || !bandW) return;
+        const reps = Math.max(1, Math.ceil((bandW + 80) / setW));
+        const half = set.repeat(reps);
+        tr.innerHTML = half + half;
+        const halfW = setW * reps;
+        const speed = Number(tr.dataset.speed) || 36; // piksel/saniye
+        tr.style.setProperty('--band-dur', `${(halfW / speed).toFixed(2)}s`);
+        tr.dataset.half = String(Math.round(halfW));
+        tr.dataset.band = String(Math.round(bandW));
+        void tr.offsetWidth; // animasyonu temiz başlat
+        tr.classList.add('is-ready');
+      });
+    };
+    build();
+    // yazı tipi yüklenince genişlikler değişir: yeniden ölç
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(build);
+    let timer = 0, lastW = window.innerWidth;
+    window.addEventListener('resize', () => {
+      if (window.innerWidth === lastW) return; // mobilde adres çubuğu yüksekliği değişince tetiklenmesin
+      lastW = window.innerWidth;
+      clearTimeout(timer);
+      timer = setTimeout(build, 200);
+    });
+  });
+
   /* ---------- hero: fareyi izleyen ızgara ---------- */
   safe('hero-light', () => {
     const hero = $('#hero');
